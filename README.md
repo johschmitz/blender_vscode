@@ -103,6 +103,13 @@ Environment Variables:
 
 Use VS Code feature [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces). Each folder in workspace is treated as addon root.
 
+### How can I debug into third party library code from with my addon code?
+
+You can debug addon code by setting breakpoints in the VS Code debugger frontend.
+However, you might notice that you are unable to step into third party library code the addon is using.
+If you want to be able to do that, you need to set `"blender.addon.justMyCode": false,` in your user `settings.json`.
+You may also find this setting by searching for `just my code` under `File -> Preferences -> Settings`.
+
 ## Script Tools
 
 When I say "script" I mean a piece of Python code that runs in Blender but is not an addon.
